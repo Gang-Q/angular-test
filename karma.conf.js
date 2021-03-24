@@ -43,5 +43,15 @@ module.exports = function (config) {
     },
     singleRun: false,
     restartOnFileChange: true,
+    coverageIstanbulReporter: {
+      reports: ["html", "lcovonly"],
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        statements: 80,
+        lines: 80,
+        branches: 80,
+        functions: 80,
+      },
+    },
   });
 };
